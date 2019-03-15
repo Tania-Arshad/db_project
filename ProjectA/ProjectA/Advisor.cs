@@ -55,7 +55,6 @@ namespace ProjectA
             string q = "insert into Person(FirstName,LastName,Contact,Email,DateOfBirth,Gender) values ('" + txt_fname.Text + "','" + txt_Lname.Text + "','" + txt_contact.Text + "','" + txt_email.Text + "',NULL,'" + value + "')";
             SqlCommand cmd = new SqlCommand(q, conStr);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("student registration successfull");
             string a = "select * from Person";
             SqlDataAdapter t = new SqlDataAdapter();
             t.SelectCommand = new SqlCommand(a, conStr);
